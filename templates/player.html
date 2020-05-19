@@ -1,0 +1,67 @@
+{#{% extends 'index.html' %}#}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>爱你~</title>
+    <style media="screen">
+    body {
+      font-size: 14px;
+      background-position: center ;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+    }
+    #video {
+      background: #000;
+    }
+    #controlWrap{
+      width:640px;
+    }
+    #progressWrap{
+      background-color: #ccc;
+      height: 2px;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    #progressWrap:hover{
+      height: 5px;
+    }
+    #playProgress{
+      background-color: #000;
+      width: 0px;
+      height: 100%;
+    }
+    </style>
+  </head>
+  <body  bgproperties="fixed" background="/media/lover1.jpg">
+
+    <p id="load_state" ></p>
+    <center>
+        <h1 style="color: lightpink"> 小公主生日快乐！ </h1>
+    <video id="video" preloader poster="/media/video/me.png" height="480" width="640">
+      <source src="/media/video/me.mp4" type="video/mp4">
+    </video>
+    </center>
+    <center>
+    <div id="controlWrap" style="text-align: center">
+      <div id="progressWrap" style="text-align: center">
+        <div id="playProgress" style="text-align: center"></div>
+      </div>
+      <button id="play_btn" type="button" name="button"></button>
+      <span id="now_time" style="font-size: small; "></span>/
+      <span id="duration" style="font-size: small; "></span>
+      音量<button id="vol_inc_btn" type="button">+</button>
+      <button id="vol_dec_btn" type="button">-</button>
+      <button id="muted_btn" type="button">静音</button>
+      <button id="speed_up" type="button">快进</button>
+      <button id="back" type="button">快退</button>
+      <button id="fullscreen" type="button">全屏</button>
+
+    </div>
+    </center>
+  </body>
+  <script src='/static/play.js'></script>
+</html>
